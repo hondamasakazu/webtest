@@ -1,0 +1,18 @@
+﻿
+@model WebTest.Models.SendCodeViewModel
+
+
+<div>
+    @Html.DisplayFor(model=> model.SelectedProvider)
+
+    @Html.DisplayFor(model=> model.ReturnUrl)
+    <hr />
+    @{if (Model != null && Model.Providers != null)
+      { 
+    foreach (var item in Model.Providers)
+    {
+        @Html.DisplayFor(model => item.Text);
+    }
+    }
+    }
+</div>

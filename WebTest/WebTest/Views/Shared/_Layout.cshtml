@@ -32,7 +32,14 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
+        <hr />        
+        @Html.Partial("_PartialPageLayout1", new WebTest.Models.SendCodeViewModel
+   {
+       SelectedProvider = "test0704",
+       ReturnUrl = "http://blog.shibayan.jp/entry/20110731/1312107909",
+       Providers = new List<SelectListItem>{  new SelectListItem {Disabled = false, Group = null, Selected= false, Text = "testテキスト", Value = "サンプル"}
+   }
+   })
         <footer>
             <p>&copy; @DateTime.Now.Year - マイ ASP.NET アプリケーション</p>
         </footer>
