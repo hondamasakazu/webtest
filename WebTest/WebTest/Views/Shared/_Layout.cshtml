@@ -37,7 +37,9 @@
    {
        SelectedProvider = "test0704",
        ReturnUrl = "http://blog.shibayan.jp/entry/20110731/1312107909",
-       Providers = new List<SelectListItem>{  new SelectListItem {Disabled = false, Group = null, Selected= false, Text = "testテキスト", Value = "サンプル"}
+       Providers = new List<SelectListItem>{  
+           new SelectListItem {Disabled = false, Group = null, Selected= false, Text = "testテキスト", Value = "サンプル"},
+           new SelectListItem {Disabled = false, Group = new SelectListGroup{Disabled = false, Name = "グループ名"}, Selected= true, Text = "レイアウト化サンプル", Value = "テストプロバイダー"}
    }
    })
         <footer>
